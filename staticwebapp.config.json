@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "route": "/*",
+      "allowedRoles": ["anonymous"]
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "globalHeaders": {
+    "X-Parse-Application-Id": "gn5aGjE30RWWPXOhePHNCyIlahQ1xIPaZBt8GbPP",
+    "X-Parse-JavaScript-Key": "TYK9ZOBtxk97zHI0rYQJygHGaxb9mElc5gi0m28f",
+    "Content-Security-Policy": "default-src 'self' https://parseapi.back4app.com"
+  },
+  "responseOverrides": {
+    "401": {
+      "rewrite": "/login.html"
+    }
+  }
+}
